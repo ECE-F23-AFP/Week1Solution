@@ -10,7 +10,7 @@ module Days =
     
     let daysToEndYear year =
         let leapYears = List.filter isLeap [epoch..year] 
-        (year-epoch)*365 + (List.length leapYears)
+        (year-epoch+1)*365 + (List.length leapYears)
     
     let daysToEndMonth (month, year) =
         let correction = match month with
